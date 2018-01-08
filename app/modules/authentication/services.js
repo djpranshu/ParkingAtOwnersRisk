@@ -48,6 +48,38 @@ angular.module('Authentication')
             $cookieStore.remove('globals');
             $http.defaults.headers.common.Authorization = 'Basic ';
         };
+
+         service.RegisterUser = function (firstname, lastname, email, password, callback) {
+
+            /* Dummy authentication for testing, uses $timeout to simulate api call
+             ----------------------------------------------*/
+            $timeout(function(){
+                var response = true;
+                if(!response) {
+                    response.message = 'Username or password is incorrect';
+                }
+                callback(response);
+            }, 1000);
+
+
+            /* Use this for real authentication
+             ----------------------------------------------*/
+            //$http.post('/api/authenticate', { username: username, password: password })
+            //    .success(function (response) {
+            //        callback(response);
+            //    });
+
+        };
+
+        service.RecoverPassword = function (email, callback) {
+                
+                /* Use this for real authentication
+             ----------------------------------------------*/
+            //$http.post('/api/authenticate', { username: username, password: password })
+            //    .success(function (response) {
+            //        callback(response);
+            //    });
+        };
  
         return service;
     }])

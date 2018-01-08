@@ -3,7 +3,7 @@
 // declare modules
 angular.module('Authentication', []);
 angular.module('Home', []);
-angular.module('Main',[]);
+
 angular.module('Register',[]);
 angular.module('ForgetPassword',[]);
 
@@ -13,7 +13,6 @@ var app = angular.module('smartManufacturingApp', [
     'Home',
     'ngRoute',
     'ngCookies',
-    'Main',
     'Register',
     'ForgetPassword',
 ])
