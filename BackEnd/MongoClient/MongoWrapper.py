@@ -1,7 +1,8 @@
 from pymongo import MongoClient
 import json
 from pymongo.errors import DuplicateKeyError
-from ErrorCodes import codes
+from BackEnd.ErrorCodes import codes
+from bson.json_util import dumps
 class MongoDatabase:
 
     def __init__(self, host, port):
@@ -10,9 +11,18 @@ class MongoDatabase:
 
     def login(self, data):
         userdb = self.db.users
-        #if 'email' in data and 'password' in data:
+        logindb = self.db.login
+        if 'username' in data and 'password' in data:
+            record = dumps(userdb.find_one({"username":data["username"], "password":data["password"]}))
+            record = json.loads(record)
+            if record is None:
+                return codes.invalidUserOrPassword()
+            else:
+                logindb.insert_one({"username":record["username"]})
+                return json.dumps({"status":"success", "message":{"username":record["username"]}})
+        else:
+            codes.badRequest()
 
-        return None
 
     def register(self, data):
         userdb = self.db.users

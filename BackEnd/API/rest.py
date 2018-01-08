@@ -1,6 +1,6 @@
 from flask import Flask, request
-from MongoClient import MongoWrapper
-from ErrorCodes import codes
+from BackEnd.MongoClient import MongoWrapper
+from BackEnd.ErrorCodes import codes
 
 db = MongoWrapper.MongoDatabase(host = 'localhost', port=27017)
 app = Flask(__name__)
