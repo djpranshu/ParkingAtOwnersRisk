@@ -2,10 +2,10 @@
  
 angular.module('ForgetPassword')
  
-.controller('ForgetPasswordController',
+.controller('ForgetPassword',
     ['$scope','$rootScope',
     function ($scope , $rootScope) {
- 
+    	
        console.log("In ForgetPassword ..");
 
     }]);

@@ -1,50 +1,47 @@
-<!--<div class="alert alert-info">
-    Username: test<br />
-    Password: test
-</div> -->
-<div class="container" ng-controller="RegisterController">
 
-<div class="register-page">
-<span><h2 class="registerhead">Parking At Owners Risk</h2></span>
-  <div class="register_form">
-  <h1>Register</h1>
- 
+<div class="register_container" ng-controller="RegisterController">
 
-<form name="form" ng-submit="register()" role="form">
-   <div class="form-group">
-        <label for="firstname" class="text-style">First Name</label>
-        
-        <input type="text" name="firstname" id="firstname" class="form-control" ng-model="firstname" required />
-        <span ng-show="form.firstname.$dirty && form.firstname.$error.required" class="help-block">First Name is required</span>
-    </div>
-
-     <div class="form-group">
-        <label for="lastname" class="text-style">Last Name</label>
-        
-        <input type="text" name="lastname" id="lastname" class="form-control" ng-model="lastname" required />
-        <span ng-show="form.lastname.$dirty && form.lastname.$error.required" class="help-block">Last Name is required</span>
-    </div>
-
-    <div class="form-group">
-        <label for="username" class="text-style">Email</label>
-        
-        <input type="text" name="username" id="username" class="form-control" ng-model="username" required />
-        <span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">Email is required</span>
-    </div>
-    <div class="form-group">
-        <label for="password" class="text-style">Password</label>
-        
-        <input type="password" name="password" id="password" class="form-control" ng-model="password" required />
-        <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span>
-    </div>
-    <div class="form-actions">
-        <button type="submit" ng-disabled="form.$invalid || dataLoading" class="btn btn-danger">Register</button>
-        <div class="backtologin"><a  href="#/login">Back to Login?</a></div>
+    <div class="register-page">
        
+        <div class="form">
+            <h1>Register</h1>
+
+
+            <form  name="form" ng-submit="register()" role="form">
+                <div class="form-group">
+                    <label for="firstname" class="text-style">First Name</label>
+
+                    <input type="text" name="firstname" id="firstname" class="form-control" ng-model="firstname" required />
+                    <span ng-show="form.firstname.$dirty && form.firstname.$error.required" class="help-block">First Name is required</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastname" class="text-style">Last Name</label>
+
+                    <input type="text" name="lastname" id="lastname" class="form-control" ng-model="lastname" required />
+                    <span ng-show="form.lastname.$dirty && form.lastname.$error.required" class="help-block">Last Name is required</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="username" class="text-style">Email</label>
+
+                    <input type="text" name="username" id="username" class="form-control" ng-model="username" required />
+                    <span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">Email is required</span>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="text-style">Password</label>
+
+                    <input type="password" name="password" id="password" class="form-control" ng-model="password" required />
+                    <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" ng-disabled="form.$invalid || dataLoading" class="btn btn-danger">Register</button>
+                    <div class="backtologin"><a href="#/login">Back to Login?</a></div>
+
+                </div>
+            </form>
+        </div>
     </div>
-</form>
-</div>
-</div>
 
 
 </div>
