@@ -3,8 +3,8 @@
 angular.module('Authentication')
  
 .controller('LoginController',
-    ['$scope', '$rootScope', '$location', 'AuthenticationService',
-    function ($scope, $rootScope, $location, AuthenticationService) {
+    ['$scope', '$rootScope', '$location', 'AuthenticationService','$timeout',
+    function ($scope, $rootScope, $location, AuthenticationService,$timeout) {
         // reset login status
         AuthenticationService.ClearCredentials();
          
@@ -19,5 +19,19 @@ angular.module('Authentication')
                     $scope.dataLoading = false;
                 }
             });
+        };
+
+        $scope.register = function(){
+
+            AuthenticationService.RegisterUser($scope.firstname , $scope.lastname , $scope.email , $scope.password ,function(response) {
+                $scope.success = "successfully Registered!!";
+            });
+
+            $timeout(function(){
+              $scope.success = false;
+              window.location.reload();
+            }, 5000);
+
+           console.log("user registered",$scope.firstname);
         };
     }]);
