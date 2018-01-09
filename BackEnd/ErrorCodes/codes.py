@@ -10,4 +10,4 @@ def badRequest():
     return json.dumps({"status":"error", "message":{"code":"802", "error":"Invalid request"}})
 
 def invalidUserOrPassword():
-    return json.dumps({"status":"error", "message":{"code":"803", "error":"Invalid username"}})
+    return json.dumps({"status":"error", "message":{"code":"803", "error":"Invalid username or password"}})
