@@ -7,6 +7,7 @@ angular.module('Authentication')
     function ($scope, $rootScope, $location, AuthenticationService,$timeout) {
         // reset login status
         AuthenticationService.ClearCredentials();
+        
          
         $scope.login = function () {
             $scope.dataLoading = true;
@@ -14,6 +15,7 @@ angular.module('Authentication')
                 if(response.success) {
                     AuthenticationService.SetCredentials($scope.username, $scope.password);
                     $location.path('/main');
+                   
                 } else {
                     $scope.error = response.message;
                     $scope.dataLoading = false;

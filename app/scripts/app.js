@@ -6,6 +6,9 @@ angular.module('Home', []);
 
 angular.module('Register',[]);
 angular.module('ForgetPassword',[]);
+angular.module('Profile',[]);
+angular.module('Booking',[]);
+
 
 
 var app = angular.module('smartManufacturingApp', [
@@ -15,6 +18,9 @@ var app = angular.module('smartManufacturingApp', [
     'ngCookies',
     'Register',
     'ForgetPassword',
+    'Profile',
+    'Booking'
+    
 ])
  
 app.config(['$routeProvider', function ($routeProvider) {
@@ -40,10 +46,21 @@ app.config(['$routeProvider', function ($routeProvider) {
             templateUrl: 'modules/authentication/views/Register.html',
             ideMenus: true
         })
+         .when('/profile', {
+            controller: 'ProfileController',
+            templateUrl: 'modules/user/views/profile.html',
+            ideMenus: true
+        })
 
          .when('/forgetpassword', {
             controller: 'ForgetPasswordController',
             templateUrl: 'modules/authentication/views/ForgetPassword.html',
+            ideMenus: true
+        })
+
+         .when('/booking', {
+            controller: 'BookingController',
+            templateUrl: 'modules/user/views/bookings.html',
             ideMenus: true
         })
  
@@ -73,13 +90,12 @@ app.run(['$rootScope', '$location', '$cookieStore', '$http',
                
             }
 
-            
-                
-           
 
  
         });
     }]);
+
+
 
 
 

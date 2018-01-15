@@ -4,9 +4,10 @@ body {margin:0}
 
 
 .header {
-    background-color: #f1f1f1;
+    background-color: #1f2533;
     padding: 20px;
     text-align: center;
+    opacity: 0.8;
 }
 
 .logout-div{
@@ -57,5 +58,30 @@ body {
 
 .forgetpassword{
   margin-left: 10px;
+}
+
+
+.project_name{
+color: grey;
+}
+.head{
+background-color: #1f2533;
+width: 100%;
+height: 45px;
+position: fixed;
+}
+
+.user_operations{
+  width: 300px;
+  float: right;
+}
+
+.user_dropdown{
+  margin-top: 5px;
+}
+
+.logout_div{
+  height: 40px;
+margin-top: 10px;
 }
 

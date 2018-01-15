@@ -1,10 +1,20 @@
-<div class="header">
-  <h1>Parking At Owners risk</h1>
- <div class="search-container">
-    <form action="">
-      <input type="text" placeholder="Search.." name="search">
-      <button type="submit"><i class="fa fa-search"></i></button>
-      <a href="#/login">Logout</a>
-    </form>
+  <div  class="home_container" >
+  <div class="head">
+  <div ng-controller="HomeController"  class="row user_operations">
+    <div class="btn-group user_dropdown col-xs-6" dropdown is-open="status.isopen" >
+      <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle ng-disabled="disabled">{{userName}} <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" role="menu">
+        <li ng-repeat="choice in items"> <a href="" ng-click="userOptionSelected(choice)">{{choice}}</a>
+        </li>
+      </ul>
+    </div>
+     <div class="col-xs-6 logout_div">
+            <div>
+              <a  href="#/login">Sign Out</a>
+            </div>
+        </div>
+   
+    </div>
   </div>
-</div>
+</div> 
