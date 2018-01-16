@@ -12,25 +12,36 @@ angular.module('Home',['ui.bootstrap'])
     'Profile'
   ];
 
+   $scope.templates = [{
+        name: 'My Profile',
+        url: 'modules/home/views/userprofile.html'},
+    {
+        name: 'My Bookings',
+        url: 'modules/home/views/mybookings.html'}];
+    
+
+    $scope.views = [{
+        name: 'View Parkings',
+        url: 'modules/home/views/parkings.html'},
+    {
+        name: 'Book Parking',
+        url: 'modules/home/views/mybookings.html'},
+    {   
+        name: 'Offers',
+        url: 'modules/home/views/offers.html'}];
+
+
+$scope.loadPartial = function(link) {
+    $scope.currentPartial =  link;
+}
+
+
+
   $scope.status = {
     isopen: false
   };
 
- $scope.userOptionSelected = function(select) {
-  
-  switch (select) {  
-                case 'Profile':  
-                      $location.path("/profile"); 
-                    break;  
-                case 'My Bookings':  
-                      $location.path("/booking"); 
-                    break;  
-                case 'Cancel Booking':  
-                     $location.path("/cancelbooking"); 
-                    break;  
-            }  
-  
-  };
+
   
 
   $scope.toggled = function(open) {

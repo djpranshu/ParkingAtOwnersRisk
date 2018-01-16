@@ -67,21 +67,99 @@ color: grey;
 .head{
 background-color: #1f2533;
 width: 100%;
-height: 45px;
+height: 50px;
 position: fixed;
 }
 
 .user_operations{
-  width: 300px;
+  width: 100%;
+  float: left;
+}
+
+.profile_div{
   float: right;
+  width:50% ;
+  margin-right: -100px;
 }
 
 .user_dropdown{
-  margin-top: 5px;
+  width: 50%;
+  
+}
+.user_signout{
+  width: 50%;
+  margin-top: 10px;
+
+}
+.logout{
+  color: white;
+  margin-left: 10px;
 }
 
-.logout_div{
-  height: 40px;
-margin-top: 10px;
+.userDisplay{
+   position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  
+  font-size: 20px;
+  background-color: cyan;
+  border: darkgreen 5px solid;
+  padding: 5px;
+  z-index: 100;
+  background-color: red;
 }
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.nav_button{
+  margin: 5px;
+}
+
+.main_container{
+  position: fixed;
+  top: 54%;
+  left: 50%;
+  width:95%;
+  height:85%; 
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  
+  padding: 5px;
+  z-index: 100;
+  background-color: #282828;
+     opacity: 0.8;
+     filter: alpha(opacity=50);
+     color: white;
+     border-style: solid;
+      border-color: #696969;
+}

@@ -8,6 +8,7 @@ angular.module('Register',[]);
 angular.module('ForgetPassword',[]);
 angular.module('Profile',[]);
 angular.module('Booking',[]);
+angular.module('Parking',[]);
 
 
 
@@ -19,7 +20,8 @@ var app = angular.module('smartManufacturingApp', [
     'Register',
     'ForgetPassword',
     'Profile',
-    'Booking'
+    'Booking',
+    'Parking'
     
 ])
  
@@ -61,6 +63,11 @@ app.config(['$routeProvider', function ($routeProvider) {
          .when('/booking', {
             controller: 'BookingController',
             templateUrl: 'modules/user/views/bookings.html',
+            ideMenus: true
+        })
+         .when('/main/parkings', {
+            controller: 'ParkingController',
+            templateUrl: 'modules/home/views/parkings.html',
             ideMenus: true
         })
  

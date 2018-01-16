@@ -1,20 +1,30 @@
-  <div  class="home_container" >
+<div class="home_container" ng-controller="HomeController">
   <div class="head">
-  <div ng-controller="HomeController"  class="row user_operations">
-    <div class="btn-group user_dropdown col-xs-6" dropdown is-open="status.isopen" >
-      <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle ng-disabled="disabled">{{userName}} <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu" role="menu">
-        <li ng-repeat="choice in items"> <a href="" ng-click="userOptionSelected(choice)">{{choice}}</a>
-        </li>
-      </ul>
-    </div>
-     <div class="col-xs-6 logout_div">
-            <div>
-              <a  href="#/login">Sign Out</a>
-            </div>
+    <div  class="row user_operations">
+      <div class="nav_list col-xs-6">
+        <ul>
+          <li ng-repeat="v in views">
+            <button class="w3-button w3-teal nav_button" ng-click='loadPartial(v.url)'>{{v.name}}</button>
+          </li>
+        </ul>
+      </div>
+      <div class="btn-group col-xs-6 " dropdown is-open="status.isopen">
+        <div class="row profile_div">
+          <div class="col-xs-6 user_dropdown">
+            <select ng-model="template" ng-options="t.name for t in templates" class="w3-button w3-teal nav_button ">
+              <option value="">{{userName}}</option>
+            </select>
+          </div>
+          <div class="col-xs-6 user_signout"> <a href="#/login" class="glyphicon glyphicon-log-out logout">Logout</a>
+          </div>
         </div>
-   
+      </div>
+     
     </div>
   </div>
-</div> 
+  <div class="main_container">
+     <div  ng-include src="template.url"></div>
+      <div id="partialResults" ng-include="currentPartial"></div>
+  </div>
+
+</div>
