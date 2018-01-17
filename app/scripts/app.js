@@ -68,7 +68,7 @@ app.config(['$routeProvider', function ($routeProvider) {
             templateUrl: 'modules/home/views/parkings.html',
             ideMenus: true
         })
- 
+         
         .otherwise({ redirectTo: '/login' });
 }]) 
  

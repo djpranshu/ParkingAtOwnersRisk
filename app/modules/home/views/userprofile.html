@@ -43,13 +43,12 @@
     </div>
     <div class="user-nav" >
 		<ul class="nav nav-tabs">
-	        <li class="active " ><a href="#"><span class="glyphicon glyphicon-home"></span>  Home</a></li>
-	        <li  ><a href="#"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
-	        <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Messages</a></li>
+	        <li class="active " ng-repeat="v in userViews" "><button class="w3-button w3-teal nav_button" ng-click='loadUserPartial(v.url)'>{{v.name}}</button></li>
+	        
 	    </ul>
 	    <div>
 	    	 <!-- <div  ng-hide = 'setNavContentInvisible' id="partialResults" ng-include="currentPartial"></div> -->
-	    	 <h1>{{profmessage}}</h1>
+	    	<div   id="partialResults" ng-include="currentUserPartial"></div>
 	    </div>
 	</div>
 </div>
