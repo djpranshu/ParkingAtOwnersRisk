@@ -9,6 +9,9 @@ angular.module('ForgetPassword',[]);
 angular.module('Profile',[]);
 angular.module('Booking',[]);
 angular.module('Parking',[]);
+angular.module('Profile',[]);
+
+
 
 
 
@@ -21,7 +24,8 @@ var app = angular.module('smartManufacturingApp', [
     'ForgetPassword',
     'Profile',
     'Booking',
-    'Parking'
+    'Parking',
+    'Profile'
     
 ])
  
@@ -48,12 +52,6 @@ app.config(['$routeProvider', function ($routeProvider) {
             templateUrl: 'modules/authentication/views/Register.html',
             ideMenus: true
         })
-         .when('/profile', {
-            controller: 'ProfileController',
-            templateUrl: 'modules/user/views/profile.html',
-            ideMenus: true
-        })
-
          .when('/forgetpassword', {
             controller: 'ForgetPasswordController',
             templateUrl: 'modules/authentication/views/ForgetPassword.html',

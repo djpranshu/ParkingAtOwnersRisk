@@ -5,6 +5,6 @@ angular.module('Profile')
 .controller('ProfileController',
     ['$scope','$rootScope','$log',
     function ($scope , $rootScope , $log) {
-    	$scope.message = "Hello user profile...";
+    	$scope.profmessage = "Hello user profile...";
       
     }]);

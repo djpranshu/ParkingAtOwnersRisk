@@ -157,9 +157,39 @@ li a:hover {
   padding: 5px;
   z-index: 100;
   background-color: #282828;
-     opacity: 0.8;
-     filter: alpha(opacity=50);
+    
+    
      color: white;
      border-style: solid;
       border-color: #696969;
+}
+
+.home-icon{
+  font-size:40px; 
+  margin-top:5px; 
+  margin-left:10px;
+   color:#009688;
+
+}
+
+a:hover {
+  color: rgb(169, 169, 169);
+}
+
+
+.glyphicon {  margin-bottom: 10px;margin-right: 10px;}
+
+small {
+display: block;
+line-height: 1.428571429;
+color: #999;
+}
+.well-container{
+background-color: #009688;
+opacity:0.8;
+}
+
+
+.user-nav{
+  margin-top: 20px;
 }

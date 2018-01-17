@@ -6,6 +6,7 @@ angular.module('Home',['ui.bootstrap'])
     ['$scope','$rootScope','$log','$location',
     function ($scope , $rootScope , $log, $location) {
     	$scope.userName = "Hello Pranshu";
+
     
        $scope.items = [
     'My Bookings',
@@ -13,7 +14,7 @@ angular.module('Home',['ui.bootstrap'])
   ];
 
    $scope.templates = [{
-        name: 'My Profile',
+        name: 'View Profile',
         url: 'modules/home/views/userprofile.html'},
     {
         name: 'My Bookings',
@@ -31,11 +32,23 @@ angular.module('Home',['ui.bootstrap'])
         url: 'modules/home/views/offers.html'}];
 
 
+
+
+
+
 $scope.loadPartial = function(link) {
     $scope.currentPartial =  link;
+   
+  
+}
+$scope.setinvisible = function(link) {
+    $scope.currentPartial =  link;
+  
 }
 
-
+$scope.goHome = function(path) {  
+    $scope.loadPartial(path);  
+}
 
   $scope.status = {
     isopen: false
