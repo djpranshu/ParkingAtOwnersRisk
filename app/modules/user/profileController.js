@@ -13,7 +13,7 @@ angular.module('Profile')
         url: 'modules/home/views/account.html',
     	type:'glyphicon-user'},
     {
-        name: 'Bookings',
+        name: 'Booking History',
         url: 'modules/home/views/mybookings.html',
     	type:'glyphicon-credit-card'},
     	{
