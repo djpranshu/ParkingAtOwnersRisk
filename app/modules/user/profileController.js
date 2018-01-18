@@ -10,21 +10,19 @@ angular.module('Profile')
 
       	 $scope.userViews = [{
         name: 'Account',
-        url: 'modules/home/views/parkings.html',
+        url: 'modules/home/views/account.html',
     	type:'glyphicon-user'},
     {
-        name: 'My Bookings',
+        name: 'Bookings',
         url: 'modules/home/views/mybookings.html',
-    	type:'glyphicon-home'},
+    	type:'glyphicon-credit-card'},
     	{
         name: 'Settings',
-        url: 'modules/home/views/mybookings.html',
+        url: 'modules/home/views/settings.html',
     	type:'glyphicon-cog'}];
 
 $scope.loadUserPartial = function(link) {
     $scope.currentUserPartial =  link;
-   
-  
 }
 
     }]);
