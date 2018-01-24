@@ -1,46 +1,7 @@
 
 
 <div class="profile_container" ng-controller="ProfileController">
-    <div class="row">
-        <div class="col-xs-6 col-sm-6 col-md-6">
-            <div class=" well-container">
-                <div class="row ">
-                    <div class="col-sm-6 col-md-4">
-                        <img src="" alt="" class="img-rounded img-responsive" />
-                    </div>
-                    <div class="col-sm-6 col-md-8">
-                        <h4>
-                            {{userName}}</h4>
-                        <small><cite title="San Francisco, USA">San Francisco, USA <i class="glyphicon glyphicon-map-marker">
-                        </i></cite></small>
-                        <p>
-                            <i class="glyphicon glyphicon-envelope"></i>email@example.com
-                            <br />
-                            <i class="glyphicon glyphicon-globe"></i><a href="http://www.jquery2dotnet.com">www.jquery2dotnet.com</a>
-                            <br />
-                            <i class="glyphicon glyphicon-gift"></i>June 02, 1988</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xs-6 col-sm-6 col-md-6">
-        	<div class=" well-container">
-                <div class="row">
-                    <div class="col-sm-6 ">
-                        <h3>test1</h3>
-                        <h3>test2</h3>
-                    </div>
-                    <div class="col-sm-6 ">
-                        <h3>test1</h3>
-                        <h3>test2</h3>
-                       
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
+    
     <div class="user-nav" >
 		<ul class="nav nav-tabs">
 	        <li class="active " ng-repeat="v in userViews" "><button class="w3-button w3-teal nav_button_profile" ng-click='loadUserPartial(v.url)'><span class="glyphicon {{v.type}}"></span>{{v.name}}</button></li>

@@ -1,7 +1,7 @@
 .register-page{
-    position: absolute;
-         width: 400px;
-         height:540px;
+    
+         max-width:50%;
+         max-height:600px;
          background-color: #282828;
 		text-align: center;
          opacity: 0.8;
@@ -9,12 +9,16 @@
          color: white;
          right:10%;
          top:10%;
-         float: right;
+         margin: auto;
+         margin-top: 40px;
          border-style: solid;
       border-color: #696969;
          
 }
 
+.register-page >input{
+
+}
 /*css for window resize*/
  @media screen and (max-width: 699px) and (min-width: 200px) {
 

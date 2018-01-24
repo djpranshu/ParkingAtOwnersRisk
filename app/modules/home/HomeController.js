@@ -18,7 +18,7 @@ angular.module('Home',['ui.bootstrap'])
         url: 'modules/home/views/userprofile.html'},
     {
         name: 'My Bookings',
-        url: 'modules/home/views/mybookings.html'}];
+        url: 'modules/home/views/userprofile.html'}];
     
 
     $scope.views = [{
@@ -26,7 +26,7 @@ angular.module('Home',['ui.bootstrap'])
         url: 'modules/home/views/parkings.html'},
     {
         name: 'Book Parking',
-        url: 'modules/home/views/mybookings.html'},
+        url: 'modules/home/views/parkings.html'},
     {   
         name: 'Offers',
         url: 'modules/home/views/offers.html'}];
